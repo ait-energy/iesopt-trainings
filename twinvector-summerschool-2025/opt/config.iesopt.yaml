@@ -1,13 +1,24 @@
-parameters: default
+parameters: default.iesopt.param.yaml
 
 config:
-  name:
-    model: TwinVector
-    scenario: Basic
+  general:
+    version:
+      core: 2.7.0
+    name:
+      model: TwinVector
+      scenario: Basic
+    verbosity:
+      core: warning
+      progress: off
+      solver: off
+    performance:
+      logfile: false
   optimization:
     problem_type: LP
     snapshots:
-      count: 24
+      count: 2800
+    solver:
+      log: false
   results:
     enabled: true
     memory_only: true
@@ -26,23 +37,5 @@ carriers:
 
 load_components:
   - base_nodes.csv
+  - base_profiles.csv
   - asset_list.csv
-
-components:
-  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-  grid_electricity:
-    type: Node
-    carrier: electricity
-
-  grid_heat:
-    type: Node
-    carrier: heat
-  
-  grid_hydrogen:
-    type: Node
-    carrier: hydrogen
-
-  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
