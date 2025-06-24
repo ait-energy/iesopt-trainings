@@ -1,0 +1,6 @@
+price_electricity_buy: 1e4
+price_electricity_sell: 1e4
+price_heat_buy: 1e4
+price_heat_sell: 1e4
+price_hydrogen_buy: 1e4
+price_hydrogen_sell: 1e4
