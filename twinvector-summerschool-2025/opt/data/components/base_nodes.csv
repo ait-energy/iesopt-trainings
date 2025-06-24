@@ -1,0 +1,4 @@
+name,type,carrier
+grid_electricity,Node,electricity
+grid_heat,Node,heat
+grid_hydrogen,Node,hydrogen

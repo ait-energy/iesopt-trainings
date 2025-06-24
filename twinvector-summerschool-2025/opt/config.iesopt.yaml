@@ -1,0 +1,48 @@
+parameters: default
+
+config:
+  name:
+    model: TwinVector
+    scenario: Basic
+  optimization:
+    problem_type: LP
+    snapshots:
+      count: 24
+  results:
+    enabled: true
+    memory_only: true
+  files:
+    data: default.csv
+  paths:
+    files: data/timeseries/
+    results: out/
+    components: data/components/
+    templates: templates/
+
+carriers:
+  electricity: {}
+  heat: {}
+  hydrogen: {}
+
+load_components:
+  - base_nodes.csv
+  - asset_list.csv
+
+components:
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  grid_electricity:
+    type: Node
+    carrier: electricity
+
+  grid_heat:
+    type: Node
+    carrier: heat
+  
+  grid_hydrogen:
+    type: Node
+    carrier: hydrogen
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
