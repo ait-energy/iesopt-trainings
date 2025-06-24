@@ -1,0 +1,31 @@
+parameters:
+  p: ~
+  e: ~
+
+components:
+  storage:
+    type: Node
+    carrier: electricity
+    has_state: true
+    state_cyclic: geq
+    state_lb: 0.05 * <e>
+    state_ub: 0.95 * <e>
+
+  charging:
+    type: Unit
+    inputs: {electricity: grid_electricity}
+    outputs: {electricity: <self>.storage}
+    conversion: 1 electricity -> sqrt(0.95) electricity
+    capacity: <p> in:electricity
+  
+  discharging:
+    type: Unit
+    inputs: {electricity: <self>.storage}
+    outputs: {electricity: grid_electricity}
+    conversion: 1 electricity -> sqrt(0.95) electricity
+    capacity: <p> out:electricity
+
+functions:
+  finalize: |
+    # NOTE: This means `setpoint > 0` equals generation by the battery (discharging).
+    this.exp.setpoint = this.discharging.exp.out_electricity .- this.charging.exp.in_electricity

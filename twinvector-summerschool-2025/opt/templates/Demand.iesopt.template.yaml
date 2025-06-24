@@ -1,0 +1,9 @@
+parameters:
+  carrier: ~
+  p: ~
+
+component:
+  type: Profile
+  carrier: <carrier>
+  node_from: grid_<carrier>
+  value: <p>

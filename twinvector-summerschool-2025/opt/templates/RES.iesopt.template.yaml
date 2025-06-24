@@ -1,0 +1,10 @@
+parameters:
+  p: ~
+
+component:
+  type: Profile
+  carrier: electricity
+  node_to: grid_electricity
+  mode: ranged
+  lb: 0.0
+  ub: <p>
