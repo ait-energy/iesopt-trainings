@@ -1,0 +1,13 @@
+[project]
+name = "twinvector-summerschool-2025"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "iesopt>=2.7.0",
+    "iesopt-tools",
+]
+
+[tool.uv.sources]
+iesopt-tools = { git = "https://github.com/sstroemer/iesopt-tools.git" }
