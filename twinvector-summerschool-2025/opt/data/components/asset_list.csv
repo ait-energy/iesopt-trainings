@@ -1,4 +1,4 @@
 name,type,carrier,p,e
-load,Demand,electricity,load@data,
+load,Demand,electricity,5.0 * demand@data,
 pv,RES,,10.0 * generation_solar@data,
-battery,BESS,,1000,12000
+battery,BESS,,2.5,10.0
