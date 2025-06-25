@@ -3,7 +3,7 @@ parameters: default.iesopt.param.yaml
 config:
   general:
     version:
-      core: 2.7.0
+      core: 2.8.0
     name:
       model: TwinVector
       scenario: Basic
