@@ -1,0 +1,41 @@
+parameters: default.iesopt.param.yaml
+
+config:
+  general:
+    version:
+      core: 2.7.0
+    name:
+      model: TwinVector
+      scenario: Basic
+    verbosity:
+      core: warning
+      progress: off
+      solver: off
+    performance:
+      logfile: false
+  optimization:
+    problem_type: LP
+    snapshots:
+      count: 2800
+    solver:
+      log: false
+  results:
+    enabled: true
+    memory_only: true
+  files:
+    data: default.csv
+  paths:
+    files: data/timeseries/
+    results: out/
+    components: data/components/
+    templates: templates/
+
+carriers:
+  electricity: {}
+  heat: {}
+  hydrogen: {}
+
+load_components:
+  - base_nodes.csv
+  - base_profiles.csv
+  - asset_list.csv

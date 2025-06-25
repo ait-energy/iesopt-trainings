@@ -1,0 +1,7 @@
+name,type,carrier,node_to,node_from,mode,cost
+buy_electricity,Profile,electricity,grid_electricity,,create,<price_electricity_buy>
+sell_electricity,Profile,electricity,,grid_electricity,destroy,<price_electricity_sell>
+buy_heat,Profile,heat,grid_heat,,create,<price_heat_buy>
+sell_heat,Profile,heat,,grid_heat,destroy,<price_heat_sell>
+buy_hydrogen,Profile,hydrogen,grid_hydrogen,,create,<price_hydrogen_buy>
+sell_hydrogen,Profile,hydrogen,,grid_hydrogen,destroy,<price_hydrogen_sell>
