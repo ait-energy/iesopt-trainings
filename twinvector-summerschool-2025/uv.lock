@@ -93,6 +93,15 @@ wheels = [
 ]
 
 [[package]]
+name = "filelock"
+version = "3.18.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/0a/10/c23352565a6544bdc5353e0b15fc1c563352101f30e24bf500207a54df9a/filelock-3.18.0.tar.gz", hash = "sha256:adbc88eabb99d2fec8c9c1b229b171f18afa655400173ddc653d5d01501fb9f2", size = 18075, upload-time = "2025-03-14T07:11:40.47Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4d/36/2a115987e2d8c300a974597416d9de88f2444426de9571f4b59b2cca3acc/filelock-3.18.0-py3-none-any.whl", hash = "sha256:c401f4f8377c4464e6db25fff06205fd89bdd83b65eb0488ed1b160f780e21de", size = 16215, upload-time = "2025-03-14T07:11:39.145Z" },
+]
+
+[[package]]
 name = "fonttools"
 version = "4.58.4"
 source = { registry = "https://pypi.org/simple" }
@@ -119,7 +128,7 @@ wheels = [
 
 [[package]]
 name = "iesopt"
-version = "2.7.0"
+version = "2.8.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "juliacall" },
@@ -129,9 +138,9 @@ dependencies = [
     { name = "pydantic" },
     { name = "python-dotenv" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/29/0d/ed77fa9129c0373b2ff7b7cb57666156d32ae961b973d029ff95bf3733eb/iesopt-2.7.0.tar.gz", hash = "sha256:e3424876c8c5c1b9bc2c218966520811ca1b9ce228ed79d2a7d57689a4e64638", size = 198891, upload-time = "2025-05-23T19:23:32.673Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ad/26/1d7e12c10d678c73cde8342be994904a936f2c6b8d0bc2dbc865954e94aa/iesopt-2.8.0.tar.gz", hash = "sha256:596eb390e98caf5274a9eca2491d9e6edb024dfd3ae4c78e65fd912a43b8dc67", size = 199580, upload-time = "2025-06-24T20:28:26.054Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/63/16/52d15e5dc01672fdda60207fa19eb0f84d6429feaf38e5fdc1265b279aa1/iesopt-2.7.0-py3-none-any.whl", hash = "sha256:e1f6fdaa30e5a6670f191c7d868059f7efc281df7fda945eb3f840c3f7ac7219", size = 20316, upload-time = "2025-05-23T19:23:30.877Z" },
+    { url = "https://files.pythonhosted.org/packages/67/6f/b3fa48a54addcd1eca5d1d96781da47f4dafcdbc0a3077a8df283574612f/iesopt-2.8.0-py3-none-any.whl", hash = "sha256:dcb9bfb6f573a65d966c88e3a745d960e5628514a5e49bb9808f444c5ff7d749", size = 20321, upload-time = "2025-06-24T20:28:24.401Z" },
 ]
 
 [[package]]
@@ -148,26 +157,27 @@ dependencies = [
 
 [[package]]
 name = "juliacall"
-version = "0.9.24"
+version = "0.9.25"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "juliapkg" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/cb/4b/63965b6ebc97c861b5b565bdfc5fbe942aaf6ac99b1b17427e1369fb4bec/juliacall-0.9.24.tar.gz", hash = "sha256:31bed223489b535e4e8db46bfff4596350c24f757b9c2d17296c07397f75948b", size = 470319, upload-time = "2025-01-22T10:39:49.438Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/63/ad/3d71a3192f7e4c2eedbcd85518bcf75123f99ae3fbe1109bc660939549fd/juliacall-0.9.25.tar.gz", hash = "sha256:4ca736c6a7939a41b68d59e5130a20e696e2c016688fc53c96f6329de3abcf96", size = 470817, upload-time = "2025-05-14T11:57:47.548Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/2b/88/bc544390a0bbf1eb425540b2ba2abe0d478c31d3002a703fdb640f4abc2a/juliacall-0.9.24-py3-none-any.whl", hash = "sha256:f1d7b718228c477aeba770290647f3b2d0052f683da891b4e9f88c1e1da0a394", size = 11950, upload-time = "2025-01-22T10:39:47.389Z" },
+    { url = "https://files.pythonhosted.org/packages/09/fe/74d38195769cf121a75fa22425186e35089f1c977d8437756bea952bc5a4/juliacall-0.9.25-py3-none-any.whl", hash = "sha256:269239c1489383181cf1756f2dffea2dade12a90075de08b0c8a571ec87e3731", size = 12065, upload-time = "2025-05-14T11:57:46.094Z" },
 ]
 
 [[package]]
 name = "juliapkg"
-version = "0.1.15"
+version = "0.1.17"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
+    { name = "filelock" },
     { name = "semver" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/8e/15/f3a172409d41cdf1a8c4289cfaab3fadfcce21fbe53d9730b5c7754da4b9/juliapkg-0.1.15.tar.gz", hash = "sha256:a36096fed2ddfe6fbd1af9bfd1b182136d84a660d0c4187539194229fb383720", size = 16065, upload-time = "2024-11-08T16:40:41.407Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/22/ab/07967a2580ddb673d24e26ba726a7386d108890ee991b7854b58249e83fe/juliapkg-0.1.17.tar.gz", hash = "sha256:c8c4237dacb8504dc6eafa40db28842ad5fbea8958ba42ca53cc569ffa832e60", size = 17524, upload-time = "2025-05-13T21:02:26.627Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a1/87/05a0d9acd2172516480e384bd66f269e97c61b7b5412deaceca0db3e43be/juliapkg-0.1.15-py3-none-any.whl", hash = "sha256:47b3ebb5bc200b31252e3be0e740a37925ff472919cac84f32b7bd4afa3a1a53", size = 16137, upload-time = "2024-11-08T16:40:40.305Z" },
+    { url = "https://files.pythonhosted.org/packages/0d/77/f98f17e061c4bd0bd29101eb53a0795e04e2dbe6d6e4676db80b46f60330/juliapkg-0.1.17-py3-none-any.whl", hash = "sha256:f5b28fe2ae7cbf6f7cfead3567e7630040fe52701a4dd7551ac8d17c87fafd50", size = 16833, upload-time = "2025-05-13T21:02:25.234Z" },
 ]
 
 [[package]]
