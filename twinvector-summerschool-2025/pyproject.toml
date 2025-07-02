@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "iesopt>=2.7.0",
     "iesopt-tools",
+    "ipykernel>=6.29.5",
 ]
 
 [tool.uv.sources]
