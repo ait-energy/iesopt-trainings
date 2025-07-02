@@ -8,7 +8,7 @@ be found in the [official documentation](https://ait-energy.github.io/iesopt/).
 
 ### TwinVECTOR Summer School 2025
 
-_... to be added ..._
+A summer school is to be held between the 15th and 21th of September at the TBU Zlin by [Klara Maggauer](mailto:klara.maggauer@ait.ac.at) and [Petra Reisz](mailto:petra.reisz@ait.ac.at).
 
 ## Licence
 
