@@ -66,3 +66,9 @@ for asset in entry.query("carrier", "node = 'grid_electricity' AND direction = '
 
 fig.show( )
 fig._fig.write_html("opt/out/plot_summerschool.html")
+
+
+from iesopttools.diagrams import drawio
+
+# NOTE: Open the resulting file either in the web/desktop app, or use the "Draw.io Integration" extension in VSCode!
+drawio.write_entry(entry, filename="opt/out/sketch.drawio")
