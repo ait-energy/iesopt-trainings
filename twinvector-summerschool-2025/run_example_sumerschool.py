@@ -1,7 +1,6 @@
 import iesopt
 
 
-
 # Other alternative parameters could, e.g., be:
 #
 # 1. `dict(price_electricity_buy = "dayahead_price@data", price_electricity_sell = 10.0)`
@@ -52,7 +51,8 @@ combo.to_csv("opt/out/batt_charge_discharge.csv")
 
 
 from iesopttools import RDB, Figure, Trace
-
+import plotly.io as pio
+pio.renderers.default = "browser"
 rdb = RDB()
 entry = rdb.add_entry(model)
 
