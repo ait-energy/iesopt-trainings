@@ -38,14 +38,7 @@ carriers:
   # heat: {}
   # hydrogen: {} you could also consider them
 
-load_components:
-  - asset_list.csv
-  # optional
-  # you could just load (also other) by:
-  # - base_nodes.csv
-  # optional
-  # you could just load (also other) by:
-  # - base_profiles.csv
+
 components:
   grid_electricity:
     type: Node
@@ -68,3 +61,11 @@ components:
     mode: destroy
     # cost: <price_electricity_sell>
     cost: 10.0 + dayahead_price@data
+load_components:
+  - asset_list.csv
+  # optional
+  # you could just load (also other) by:
+  # - base_nodes.csv
+  # optional
+  # you could just load (also other) by:
+  # - base_profiles.csv

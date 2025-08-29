@@ -8,6 +8,7 @@ dependencies = [
     "iesopt>=2.7.0",
     "iesopt-tools",
     "ipykernel>=6.30.1",
+    "nbformat>=5",
 ]
 
 [tool.uv.sources]
