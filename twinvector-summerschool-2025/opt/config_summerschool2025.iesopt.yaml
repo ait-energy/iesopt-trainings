@@ -1,0 +1,79 @@
+parameters:
+  price_electricity_buy: 1e4
+  price_electricity_sell: 1e4
+  p_bess: 2.5
+  h_bess: 4.0
+  # price_heat_buy: 1e4 # etc
+
+config:
+  general:
+    version:
+      core: 2.8.0
+    name:
+      model: TwinVector
+      scenario: Basic
+    verbosity:
+      core: warning
+      progress: off
+      solver: off
+    performance:
+      logfile: false
+  optimization:
+    problem_type: LP
+    snapshots:
+      count: 2800
+    solver:
+      log: false
+  results:
+    enabled: true
+    memory_only: true
+  files:
+    data: default.csv
+  paths:
+    files: data/timeseries/
+    results: out/
+    components: data/components/
+    templates: templates/
+
+carriers:
+  electricity: {}
+  # heat: {}
+  # hydrogen: {} you could also consider them
+
+
+components:
+  grid_electricity:
+    type: Node
+    carrier: electricity
+
+  # This example uses the day-ahead price with a markup of +10.0 EUR/MWh for buying, and allows selling at the day-ahead
+  # price, with a markup of +5.0 EUR/MWh.
+  buy_electricity:
+    type: Profile
+    carrier: electricity
+    node_to: grid_electricity
+    mode: create
+    #cost: <price_electricity_buy>
+    cost: 5.0 - dayahead_price@data
+
+  sell_electricity:
+    type: Profile
+    carrier: electricity
+    node_from: grid_electricity
+    mode: destroy
+    # cost: <price_electricity_sell>
+    cost: 10.0 + dayahead_price@data
+    
+  battery:
+    type: BESS
+    p: <p_bess>
+    e: <h_bess> *<p_bess>
+
+load_components:
+  - asset_list.csv
+  # optional
+  # you could just load (also other) by:
+  # - base_nodes.csv
+  # optional
+  # you could just load (also other) by:
+  # - base_profiles.csv
