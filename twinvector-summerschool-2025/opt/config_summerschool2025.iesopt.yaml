@@ -1,6 +1,8 @@
 parameters:
   price_electricity_buy: 1e4
   price_electricity_sell: 1e4
+  p_bess: 2.5
+  h_bess: 4.0
   # price_heat_buy: 1e4 # etc
 
 config:
@@ -61,6 +63,12 @@ components:
     mode: destroy
     # cost: <price_electricity_sell>
     cost: 10.0 + dayahead_price@data
+    
+  battery:
+    type: BESS
+    p: <p_bess>
+    e: <h_bess> *<p_bess>
+
 load_components:
   - asset_list.csv
   # optional
