@@ -21,7 +21,7 @@ config:
   optimization:
     problem_type: LP
     snapshots:
-      count: 2800
+      count: 8760 #one year,leap year!
     solver:
       log: false
   results:
